@@ -2,7 +2,7 @@
     "clientName": "Thunder Client",
     "collectionName": "trabajo pack",
     "collectionId": "4f383788-a67c-4f7b-9c11-3529badb115c",
-    "dateExported": "2025-04-04T01:04:19.747Z",
+    "dateExported": "2025-04-08T10:51:30.219Z",
     "version": "1.2",
     "folders": [
         {
@@ -33,39 +33,35 @@
             "colId": "4f383788-a67c-4f7b-9c11-3529badb115c",
             "containerId": "2acbc841-0db4-4d1e-ab44-a4c90bb42076",
             "name": "traer todos los registros",
-            "url": "http://127.0.0.1:4500/bootcamps",
+            "url": "http://127.0.0.1:4500/trabajo",
             "method": "GET",
             "sortNum": 40000,
             "created": "2023-11-21T16:07:42.360Z",
-            "modified": "2023-11-21T16:07:42.360Z",
-            "headers": [],
-            "params": [],
-            "tests": []
+            "modified": "2025-04-08T10:43:56.705Z",
+            "headers": []
         },
         {
             "_id": "8728c6af-2fca-4170-8385-cdf4cdb3eb13",
             "colId": "4f383788-a67c-4f7b-9c11-3529badb115c",
             "containerId": "2acbc841-0db4-4d1e-ab44-a4c90bb42076",
             "name": "traer regsitros por id",
-            "url": "http://127.0.0.1:4500/bootcamps/65383b27d70feb0ab07b9b8e",
+            "url": "http://127.0.0.1:4500/trabajo/67f4ff654c0ea20df39fa6f9",
             "method": "GET",
             "sortNum": 50000,
             "created": "2023-11-21T16:07:42.361Z",
-            "modified": "2023-11-21T16:07:42.361Z",
-            "headers": [],
-            "params": [],
-            "tests": []
+            "modified": "2025-04-08T10:50:40.199Z",
+            "headers": []
         },
         {
             "_id": "4c72abeb-0eff-49cf-9a62-b6c76cfced57",
             "colId": "4f383788-a67c-4f7b-9c11-3529badb115c",
             "containerId": "2acbc841-0db4-4d1e-ab44-a4c90bb42076",
             "name": "crear registro",
-            "url": "http://127.0.0.1:4500/bootcamps",
+            "url": "http://127.0.0.1:4500/trabajo",
             "method": "POST",
             "sortNum": 60000,
             "created": "2023-11-21T16:07:42.362Z",
-            "modified": "2025-04-03T20:35:50.237Z",
+            "modified": "2025-04-08T10:50:13.877Z",
             "headers": [
                 {
                     "name": "Content-Type",
@@ -74,7 +70,7 @@
             ],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"name\":\"Red Hat Linux\",\n  \"phone\":164654,\n  \"address\":\"sena cll uninpahu\",\n  \"topics\":[\"Devops\"],\n  \"CreatedAt\":\"2023-10-24\"\n  \n  \n}",
+                "raw": "{\n  \"name\":\"kevin stiven\",\n  \"lastName\":\"santamaria\",\n  \"phone\":\"1234567\",\n  \"birthdate\":\"2023-10-24\",\n  \"imgUrl\":\"https://github.com/santamaria314k/\"\n  \n  \n}",
                 "form": []
             }
         },
@@ -83,15 +79,15 @@
             "colId": "4f383788-a67c-4f7b-9c11-3529badb115c",
             "containerId": "2acbc841-0db4-4d1e-ab44-a4c90bb42076",
             "name": "actualizar registro por id",
-            "url": "http://127.0.0.1:4500/bootcamps/67eef126df4f65d9396b599e",
+            "url": "http://127.0.0.1:4500/trabajo/67f4fd144c0ea20df39fa6f0",
             "method": "PUT",
             "sortNum": 70000,
             "created": "2023-11-21T16:07:42.363Z",
-            "modified": "2025-04-03T20:43:04.521Z",
+            "modified": "2025-04-08T10:45:07.188Z",
             "headers": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"name\":\"feliz navidad\",\n  \"phone\":164654,\n  \"address\":\"sena cll uninpahu\",\n  \"topics\":[\"Devops\"],\n  \"CreatedAt\":\"2023-10-24\"\n  \n  \n}",
+                "raw": "{\n  \"name\":\"kevin\",\n  \"lastName\":\"santamaria\",\n  \"phone\":\"1234567\",\n  \"birthdate\":\"2023-10-24\",\n  \"imgUrl\":\"https://github.com/santamaria314k/proyecto-servidores-web-rest-full/blob/main/models/trabajoModel.js\"\n  \n  \n}",
                 "form": []
             }
         },
@@ -100,13 +96,13 @@
             "colId": "4f383788-a67c-4f7b-9c11-3529badb115c",
             "containerId": "2acbc841-0db4-4d1e-ab44-a4c90bb42076",
             "name": "eliminar registro por id",
-            "url": "http://127.0.0.1:4500/bootcamps/67eef126df4f65d9396b599e",
+            "url": "http://127.0.0.1:4500/trabajo/67f4fd144c0ea20df39fa6f0",
             "method": "DELETE",
             "sortNum": 80000,
             "created": "2023-11-21T16:07:42.364Z",
-            "modified": "2025-04-03T20:43:26.716Z",
+            "modified": "2025-04-08T10:46:31.469Z",
             "headers": []
         }
     ],
-    "ref": "eM9hPUXi5Oa1-b98MZDyInMUaAY6iGXVFVAHh6cK_4bKywZZ3Jgfx6Ov0IhhjoSrHiVeAY_f6uz9Vaw4RK_Xww"
+    "ref": "eM9hPUXi5Oa1-b98MZDyIvdo0aemS2hSa8Ikcqqa90D-8KZaZ43or-VPguIwK2jxJxRiKM3IYo9v370_FhHK5A"
 }

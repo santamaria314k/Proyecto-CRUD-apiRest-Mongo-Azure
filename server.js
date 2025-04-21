@@ -1,94 +1,41 @@
-const express = require('express')
+const express = require('express');
+const dotenv = require('dotenv');
+const colors = require('colors');
+const path = require('path');
+const connectDB = require('./config/db.js');
 
-const dotenv = require('dotenv')
+// Configurar variables de entorno
+dotenv.config({ path: './config/.env' });
 
-const colors=require('colors')
+// Crear aplicación
+const app = express();
 
-const connectDB =require('./config/db.js')
+// Conectar a la base de datos
+connectDB();
 
-// crear el objetro de la aplicasion 
-   
+const cors = require('cors');
+app.use(cors());
 
-const app=express()
-
-//ejecutar connection a db 
-
-
-//dependencia de formateo  body
-
-app.use(express.json())
-
-connectDB()
-
-//configuracion
-
-dotenv.config({
-path:'./config/.env'
-
-})
-
-
-//url de prueva
-
-app.get('/prueba',(req , res )=>{
-
-    //ejemplo de response 
-    res.send("Hola")
-
-})
+// Middleware para parsear JSON
+app.use(express.json());
 
 
 
 
+// Servir archivos estáticos (HTML, CSS, JS desde /public)
+app.use(express.static(path.join(__dirname, "public")));
 
 
 
 
-const trabajoRoutes = require('./routes/trabajoRoutes.js')
+// Ruta de prueba
+app.get('/prueba', (req, res) => {
+    res.send("Hello!");
+});
 
-
-
-
-//crear las uris del trabajo
-//------------------------------------------------==================
-//------------------------------------------------==================
-//------------------------------------------------==================
-//------------------------------------------------==================
-
-
-
-//uri de trabajo
-  
-
-app.use('/trabajo',trabajoRoutes)
-
-
-
-
-
-
-
-
-
-//crear las uris de los users
-//------------------------------------------------==================
-//------------------------------------------------==================
-//------------------------------------------------==================
-//------------------------------------------------==================
-
-app.use('/auth',usersRoutes)
-
-
-
-//crear las uris de los reviews
-//------------------------------------------------==================
-//------------------------------------------------==================
-//------------------------------------------------==================
-//------------------------------------------------==================
-app.use('/reviews',reviewsRoutes)
-
-
-
+// Rutas de la API
+const trabajoRoutes = require('./routes/trabajoRoutes.js');
+app.use('/trabajo', trabajoRoutes);
 
 
 
