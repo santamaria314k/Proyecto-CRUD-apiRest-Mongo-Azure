@@ -1,19 +1,18 @@
-const colors=require('colors')
-const mongoose=require('mongoose')
+const colors = require('colors');
+const mongoose = require('mongoose');
 
+async function connectDB() {
+  try {
+    const conn = await mongoose.connect(process.env.MONGO_URL || 'mongodb://mongodbtrabajo:', {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
 
+    console.log(`✅ Conexión exitosa a Azure Cosmos DB: ${conn.connection.host}`.cyan.underline);
+  } catch (error) {
+    console.error(`❌ Error al conectar a la base de datos: ${error.message}`.red);
+    process.exit(1);
+  }
+}
 
-
-
-async function connectDB(){
-
-
- const conn = await mongoose.connect(process.env.MONGO_URL || 'mongodb://127.0.0.1:27017/trabajo')
-
-console.log(`conexion exitosa a mongo :   ${conn.connection.host}`)
-
- }
-
-
-
- module.exports=connectDB
+module.exports = connectDB;
